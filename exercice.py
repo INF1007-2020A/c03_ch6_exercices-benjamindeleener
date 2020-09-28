@@ -7,7 +7,15 @@ def order(values: list = None) -> bool:
         # TODO: Demander les valeurs ici
         pass
 
-    return False
+    resultat = True
+    index = 0
+    while index < len(ma_liste) - 1:
+        if ma_liste[index] > ma_liste[index+1]:
+            resultat = False
+            break
+        index += 1
+    
+    return resultat
 
 
 def anagrams(words: list = None) -> bool:
