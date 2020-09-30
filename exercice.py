@@ -23,11 +23,7 @@ def anagrams(words: list = None) -> bool:
         # TODO: Demander les mots ici
         pass
 
-    resultat = []
-    for ws in words:
-        resultat.append(sorted(ws[0]) == sorted(ws[1]))
-
-    return resultat
+    return sorted(ws[0]) == sorted(ws[1])
 
 
 def contains_doubles(items: list) -> bool:
