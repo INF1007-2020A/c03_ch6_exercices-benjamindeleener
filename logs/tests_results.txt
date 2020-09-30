@@ -1,23 +1,20 @@
-test_anagram (__main__.TestExercice) ... FAIL
+test_anagram (__main__.TestExercice) ... ERROR
 test_doubles (__main__.TestExercice) ... FAIL
 test_grades (__main__.TestExercice) ... FAIL
 test_histogram (__main__.TestExercice) ... FAIL
 test_order (__main__.TestExercice) ... FAIL
 
 ======================================================================
-FAIL: test_anagram (__main__.TestExercice)
+ERROR: test_anagram (__main__.TestExercice)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "test_exercice.py", line 40, in test_anagram
-    'Erreur dans la vérification de l\'anagramme'
-AssertionError: Lists differ: [[False, False], [False, False]] != [True, False]
-
-First differing element 0:
-[False, False]
-True
-
-- [[False, False], [False, False]]
-+ [True, False] : Erreur dans la vérification de l'anagramme
+  File "test_exercice.py", line 35, in test_anagram
+    output = [exercice.anagrams(v) for v in words]
+  File "test_exercice.py", line 35, in <listcomp>
+    output = [exercice.anagrams(v) for v in words]
+  File "/home/runner/work/c03_ch6_exercices-benjamindeleener/c03_ch6_exercices-benjamindeleener/exercice.py", line 26, in anagrams
+    return sorted(ws[0]) == sorted(ws[1])
+NameError: name 'ws' is not defined
 
 ======================================================================
 FAIL: test_doubles (__main__.TestExercice)
@@ -68,4 +65,4 @@ False
 ----------------------------------------------------------------------
 Ran 5 tests in 0.001s
 
-FAILED (failures=5)
+FAILED (failures=4, errors=1)
