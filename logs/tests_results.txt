@@ -2,19 +2,7 @@ test_anagram (__main__.TestExercice) ... FAIL
 test_doubles (__main__.TestExercice) ... FAIL
 test_grades (__main__.TestExercice) ... FAIL
 test_histogram (__main__.TestExercice) ... FAIL
-test_order (__main__.TestExercice) ... ERROR
-
-======================================================================
-ERROR: test_order (__main__.TestExercice)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "test_exercice.py", line 19, in test_order
-    output = [exercice.order(v) for v in values]
-  File "test_exercice.py", line 19, in <listcomp>
-    output = [exercice.order(v) for v in values]
-  File "/home/runner/work/c03_ch6_exercices-benjamindeleener/c03_ch6_exercices-benjamindeleener/exercice.py", line 12, in order
-    while index < len(ma_liste) - 1:
-NameError: name 'ma_liste' is not defined
+test_order (__main__.TestExercice) ... FAIL
 
 ======================================================================
 FAIL: test_anagram (__main__.TestExercice)
@@ -62,7 +50,22 @@ Traceback (most recent call last):
     'Erreur dans les histogrammes'
 AssertionError: [({}, []), ({}, [])] is not an instance of <class 'dict'> : First argument is not a dictionary
 
+======================================================================
+FAIL: test_order (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 25, in test_order
+    'Mauvais ordre'
+AssertionError: Lists differ: [False, False] != [[-2, 1, 6, 9], ['2', 'a', 'hello']]
+
+First differing element 0:
+False
+[-2, 1, 6, 9]
+
+- [False, False]
++ [[-2, 1, 6, 9], ['2', 'a', 'hello']] : Mauvais ordre
+
 ----------------------------------------------------------------------
 Ran 5 tests in 0.001s
 
-FAILED (failures=4, errors=1)
+FAILED (failures=5)
