@@ -9,8 +9,8 @@ def order(values: list = None) -> bool:
 
     resultat = True
     index = 0
-    while index < len(ma_liste) - 1:
-        if ma_liste[index] > ma_liste[index+1]:
+    while index < len(values) - 1:
+        if values[index] > values[index+1]:
             resultat = False
             break
         index += 1
