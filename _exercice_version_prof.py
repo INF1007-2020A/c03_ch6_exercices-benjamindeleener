@@ -3,8 +3,8 @@
 
 def capitaliser_pays(nom):
     # Ceci est la version pour le/la professeur(e)
-    for caractere in nom:
-        print('Mon caractère est', caractere)
+    for car in nom:
+        print(car)
     return nom
 
 
